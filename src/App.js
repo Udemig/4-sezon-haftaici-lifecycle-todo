@@ -32,7 +32,12 @@ function App() {
     <div className="container p-5">
       <AddTodoForm didUpdate={didUpdate} setDidUpdate={setDidUpdate} />
       {todos.map((todo) => (
-        <SingleTodo key={todo.id} todo={todo} />
+        <SingleTodo
+          key={todo.id}
+          todo={todo}
+          didUpdate={didUpdate}
+          setDidUpdate={setDidUpdate}
+        />
       ))}
     </div>
   );
